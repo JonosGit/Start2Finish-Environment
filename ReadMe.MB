@@ -3,10 +3,10 @@ Setup Instructions for Environment Configuration Scripts
 This solution creates an environment with two Windows 2012 R2 Servers with Active Directory installed. It also creates and configures corresponding VNET/SUBNETs for the domain. Lastly the createvm scripts provide deployment scripts that can be easily automated to deploy Red Hat and Windows 2012 R2 instances to the domains corresponding subnets.
 
 Files Included in this solution:
-AIP_SubnetCreation.ps1
-AIP_createvm_exist_vnet_windows.ps1
-AIP_createvm_exist_vnet_linux.ps1
-AIP_DeployVNET_WinAD.ps1
+SubnetCreation.ps1
+createvm_exist_vnet_windows.ps1
+createvm_exist_vnet_linux.ps1
+DeployVNET_WinAD.ps1
 ad_ha.azuredeploy.json
 
 
