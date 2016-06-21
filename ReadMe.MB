@@ -1,0 +1,18 @@
+Setup Instructions for Environment Configuration Scripts
+
+This solution creates an environment with two Windows 2012 R2 Servers with Active Directory installed. It also creates and configures corresponding VNET/SUBNETs for the domain. Lastly the createvm scripts provide deployment scripts that can be easily automated to deploy Red Hat and Windows 2012 R2 instances to the domains corresponding subnets.
+
+Files Included in this solution:
+AIP_SubnetCreation.ps1
+AIP_createvm_exist_vnet_windows.ps1
+AIP_createvm_exist_vnet_linux.ps1
+AIP_DeployVNET_WinAD.ps1
+ad_ha.azuredeploy.json
+
+
+Note, these scripts require Azure Powershell 1.0.
+
+1.) Update the script files to include dependent subscription and resource group information.
+2.) Execute AIP_DeployVNET_WinAD.ps1 to create a new domain and the underlying VNET/Subnet
+3.) Execute AIP_SubnetCreation.ps1 to create 7 additional subnets on the VNET (for server deployment)
+4.) To deploy a new Linux or Windows VM use the corresponding createvm Ps1 script. (AIP_createvm_exist_vnet_linux.ps1 or AIP_createvm_exist_vnet_windows.ps1)
